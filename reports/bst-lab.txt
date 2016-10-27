@@ -1,0 +1,314 @@
+Lab report for BST Lab - eatsalog
+Timestamp: 2015-04-10 02:02:49
+
+|  :scenario |                                                    :title |                              :result | :score |
+|------------+-----------------------------------------------------------+--------------------------------------+--------|
+|    working |                     Test student code vs instructor tests |                                 Pass |     45 |
+| qualifying |                     Test student tests vs instructor code |                                 Pass |      5 |
+|    broke-1 |                               Add doesn't increment size. | Pass: student tests detected errors. |      5 |
+|    broke-2 |                                 Add swaps left and right. | Pass: student tests detected errors. |      5 |
+|    broke-3 |                                    Find only checks left. | Pass: student tests detected errors. |      5 |
+|    broke-4 | Two child delete copies predecessor instead of moving it. | Pass: student tests detected errors. |      5 |
+|    broke-5 |                        Map tree does keys and not values. | Pass: student tests detected errors. |      5 |
+|    broke-6 |                          Delete decrements size too much. | Pass: student tests detected errors. |      5 |
+|    broke-7 |                                Delete truncates subtrees. | Pass: student tests detected errors. |      5 |
+|    broke-8 |                         Delete value doesn't always work. | Pass: student tests detected errors. |      5 |
+|    broke-9 |                    Delete value decrements size too much. | Pass: student tests detected errors. |      5 |
+|   broke-10 |                   Add sometimes increments size too much. | Pass: student tests detected errors. |      5 |
+|      total |                                               Total Score |                                      |    100 |
+
+Details:
+
+
+** Details for Test student code vs instructor tests
+
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.t_core, being replaced by: #'bst.core/find
+All checks (55) succeeded.
+
+
+** Details for Test student tests vs instructor code
+
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.core, being replaced by: #'bst.core/find
+All checks (38) succeeded.
+
+
+** Details for Add doesn't increment size.
+
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.core, being replaced by: #'bst.core/find
+
+FAIL "about add - increases the size properly" at (t_core.clj:42)
+    Expected: 1
+      Actual: 0
+
+FAIL "about add - increases the size properly" at (t_core.clj:43)
+    Expected: 1
+      Actual: 0
+
+FAIL "about add - increases the size properly" at (t_core.clj:44)
+    Expected: 9
+      Actual: 0
+
+FAIL "about add - increases the size properly" at (t_core.clj:45)
+    Expected: 9
+      Actual: 0
+
+FAIL "about add - increases the size properly" at (t_core.clj:46)
+    Expected: 9
+      Actual: 0
+
+FAIL "about add - increases the size properly" at (t_core.clj:47)
+    Expected: 9
+      Actual: 0
+
+FAIL "about add - increases the size properly" at (t_core.clj:48)
+    Expected: 10
+      Actual: 0
+FAILURE: 7 checks failed.  (But 31 succeeded.)
+Subprocess failed
+
+
+** Details for Add swaps left and right.
+
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.core, being replaced by: #'bst.core/find
+
+FAIL "about add - adds a key effectively to the tree" at (t_core.clj:37)
+    Expected: ["d" "c" "e" "b" "a" "i" "g" "j" "f" "h"]
+      Actual: ["h" "f" "j" "g" "i" "a" "b" "e" "c" "d"]
+
+FAIL "about add - adds a key effectively to the tree" at (t_core.clj:38)
+    Expected: ["j" "d" "c" "e" "b" "a" "i" "g" "f" "h"]
+      Actual: ["h" "f" "g" "i" "a" "b" "e" "c" "d" "j"]
+
+FAIL "about add - adds a key effectively to the tree" at (t_core.clj:39)
+    Expected: ["d" "c" "e" "b" "a" "i" "g" "f" "h" "j"]
+      Actual: ["j" "h" "f" "g" "i" "a" "b" "e" "c" "d"]
+
+FAIL "about find - finds the key of a value" at (t_core.clj:53)
+    Expected: "b"
+      Actual: nil
+
+FAIL "about find - finds the key of a value" at (t_core.clj:54)
+    Expected: "d"
+      Actual: nil
+
+FAIL "about find - finds the key of a value" at (t_core.clj:55)
+    Expected: "h"
+      Actual: nil
+
+FAIL "about find - finds the key of a value" at (t_core.clj:56)
+    Expected: "i"
+      Actual: nil
+
+FAIL "about delete - deletes key from BST right and left of tree" at (t_core.clj:70)
+    Expected: ["d" "c" "e" "a" "i" "g" "f" "h"]
+      Actual: ["h" "f" "g" "i" "a" "b" "e" "c" "d"]
+
+FAIL "about delete - deletes key from BST right and left of tree" at (t_core.clj:71)
+    Expected: ["d" "c" "e" "b" "i" "g" "f" "h"]
+      Actual: ["h" "f" "g" "i" "i" "b" "e" "c" "d"]
+
+FAIL "about delete - deletes key from BST right and left of tree" at (t_core.clj:72)
+    Expected: ["d" "c" "e" "b" "a" "g" "f" "h"]
+      Actual: ["h" "f" "g" "i" "a" "b" "e" "c" "d"]
+
+FAIL "about delete - deletes key from BST right and left of tree" at (t_core.clj:73)
+    Expected: ["d" "c" "e" "b" "a" "i" "f" "h"]
+      Actual: ["h" "f" "g" "i" "a" "b" "e" "c" "d"]
+
+FAIL "about delete - deletes key from BST right and left of tree" at (t_core.clj:74)
+    Expected: ["d" "c" "e" "b" "a" "i" "g" "h"]
+      Actual: ["h" "f" "g" "i" "a" "b" "e" "c" "d"]
+
+FAIL "about delete - deletes key from BST right and left of tree" at (t_core.clj:75)
+    Expected: ["d" "c" "e" "b" "a" "i" "g" "f"]
+      Actual: ["h" "f" "g" "i" "a" "b" "e" "c" "d"]
+
+FAIL "about delete - deletes key from BST right and left of tree" at (t_core.clj:76)
+    Expected: ["d" "c" "e" "b" "a" "i" "g" "f" "h"]
+      Actual: ["h" "f" "g" "i" "a" "b" "e" "c" "d"]
+
+FAIL "about delete - deletes key from BST right and left of tree" at (t_core.clj:77)
+    Expected: ["d" "e" "b" "a" "i" "g" "f" "h"]
+      Actual: ["h" "f" "g" "i" "a" "b" "e" "c" "d"]
+
+FAIL "about delete - deletes key from BST right and left of tree" at (t_core.clj:78)
+    Expected: ["c" "e" "b" "a" "i" "g" "f" "h"]
+      Actual: ["h" "f" "g" "i" "a" "b" "e" "c" "d"]
+
+FAIL "about delete - deletes key from BST right and left of tree" at (t_core.clj:79)
+    Expected: ["d" "c" "b" "a" "i" "g" "f" "h"]
+      Actual: ["h" "f" "g" "i" "a" "b" "e" "c" "d"]
+
+FAIL "about delete - decrements size properly" at (t_core.clj:82)
+    Expected: 8
+      Actual: 9
+
+FAIL "about delete-value - deletes key from BST right and left of tree" at (t_core.clj:88)
+    Expected: ["d" "c" "e" "a" "i" "g" "f" "h"]
+      Actual: ["h" "f" "g" "i" "a" "e" "c" "d"]
+
+FAIL "about delete-value - deletes key from BST right and left of tree" at (t_core.clj:89)
+    Expected: ["c" "e" "b" "a" "i" "g" "f" "h"]
+      Actual: ["h" "f" "g" "i" "a" "b" "e" "c"]
+
+FAIL "about delete-value - deletes key from BST right and left of tree" at (t_core.clj:90)
+    Expected: ["d" "c" "e" "b" "a" "i" "f" "h"]
+      Actual: ["h" "f" "i" "a" "b" "e" "c" "d"]
+
+FAIL "about delete-value - deletes key from BST right and left of tree" at (t_core.clj:91)
+    Expected: ["d" "c" "e" "b" "a" "i" "g" "f"]
+      Actual: ["f" "g" "i" "a" "b" "e" "c" "d"]
+
+FAIL "about map-tree - maps function over tree" at (t_core.clj:100)
+    Expected: ["ad" "ac" "ae" "ab" "aa" "ai" "ag" "af" "ah"]
+      Actual: ["ah" "af" "ag" "ai" "aa" "ab" "ae" "ac" "ad"]
+FAILURE: 23 checks failed.  (But 15 succeeded.)
+Subprocess failed
+
+
+** Details for Find only checks left.
+
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.core, being replaced by: #'bst.core/find
+
+FAIL "about find - finds the key of a value" at (t_core.clj:55)
+    Expected: "h"
+      Actual: nil
+
+FAIL "about find - finds the key of a value" at (t_core.clj:56)
+    Expected: "i"
+      Actual: nil
+FAILURE: 2 checks failed.  (But 36 succeeded.)
+Subprocess failed
+
+
+** Details for Two child delete copies predecessor instead of moving it.
+
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.core, being replaced by: #'bst.core/find
+
+FAIL "about delete - deletes key from BST right and left of tree" at (t_core.clj:71)
+    Expected: ["d" "c" "e" "b" "i" "g" "f" "h"]
+      Actual: ["d" "c" "e" "b" "b" "i" "g" "f" "h"]
+
+FAIL "about delete - deletes key from BST right and left of tree" at (t_core.clj:74)
+    Expected: ["d" "c" "e" "b" "a" "i" "g" "h"]
+      Actual: ["d" "c" "e" "b" "a" "i" "g" "g" "h"]
+
+FAIL "about delete - deletes key from BST right and left of tree" at (t_core.clj:77)
+    Expected: ["d" "e" "b" "a" "i" "g" "f" "h"]
+      Actual: ["d" "d" "e" "b" "a" "i" "g" "f" "h"]
+FAILURE: 3 checks failed.  (But 35 succeeded.)
+Subprocess failed
+
+
+** Details for Map tree does keys and not values.
+
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.core, being replaced by: #'bst.core/find
+
+FAIL "about map-tree - maps function over tree" at (t_core.clj:100)
+    Expected: ["ad" "ac" "ae" "ab" "aa" "ai" "ag" "af" "ah"]
+      Actual: ["d" "c" "e" "b" "a" "i" "g" "f" "h"]
+FAILURE: 1 check failed.  (But 37 succeeded.)
+Subprocess failed
+
+
+** Details for Delete decrements size too much.
+
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.core, being replaced by: #'bst.core/find
+
+FAIL "about delete - decrements size properly" at (t_core.clj:83)
+    Expected: 9
+      Actual: 8
+FAILURE: 1 check failed.  (But 37 succeeded.)
+Subprocess failed
+
+
+** Details for Delete truncates subtrees.
+
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.core, being replaced by: #'bst.core/find
+
+FAIL "about delete - deletes key from BST right and left of tree" at (t_core.clj:70)
+    Expected: ["d" "c" "e" "a" "i" "g" "f" "h"]
+      Actual: ["a" "i" "g" "f" "h"]
+
+FAIL "about delete - deletes key from BST right and left of tree" at (t_core.clj:71)
+    Expected: ["d" "c" "e" "b" "i" "g" "f" "h"]
+      Actual: ["b" "i" "g" "f" "h"]
+
+FAIL "about delete - deletes key from BST right and left of tree" at (t_core.clj:73)
+    Expected: ["d" "c" "e" "b" "a" "i" "f" "h"]
+      Actual: ["d" "c" "e" "b" "a" "f" "h"]
+
+FAIL "about delete - deletes key from BST right and left of tree" at (t_core.clj:74)
+    Expected: ["d" "c" "e" "b" "a" "i" "g" "h"]
+      Actual: ["d" "c" "e" "b" "a" "g" "h"]
+
+FAIL "about delete-value - deletes key from BST right and left of tree" at (t_core.clj:88)
+    Expected: ["d" "c" "e" "a" "i" "g" "f" "h"]
+      Actual: ["a" "i" "g" "f" "h"]
+
+FAIL "about delete-value - deletes key from BST right and left of tree" at (t_core.clj:90)
+    Expected: ["d" "c" "e" "b" "a" "i" "f" "h"]
+      Actual: ["d" "c" "e" "b" "a" "f" "h"]
+FAILURE: 6 checks failed.  (But 32 succeeded.)
+Subprocess failed
+
+
+** Details for Delete value doesn't always work.
+
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.core, being replaced by: #'bst.core/find
+
+FAIL "about delete-value - deletes key from BST right and left of tree" at (t_core.clj:90)
+    Expected: ["d" "c" "e" "b" "a" "i" "f" "h"]
+      Actual: ["d" "c" "e" "b" "a" "i" "g" "f" "h"]
+
+FAIL "about delete-value - deletes key from BST right and left of tree" at (t_core.clj:91)
+    Expected: ["d" "c" "e" "b" "a" "i" "g" "f"]
+      Actual: ["d" "c" "e" "b" "a" "i" "g" "f" "h"]
+FAILURE: 2 checks failed.  (But 36 succeeded.)
+Subprocess failed
+
+
+** Details for Delete value decrements size too much.
+
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.core, being replaced by: #'bst.core/find
+
+FAIL "about delete-value - deletes key from BST right and left of tree" at (t_core.clj:90)
+    Expected: ["d" "c" "e" "b" "a" "i" "f" "h"]
+      Actual: ["d" "c" "e" "b" "a" "i" "g" "f" "h"]
+
+FAIL "about delete-value - deletes key from BST right and left of tree" at (t_core.clj:91)
+    Expected: ["d" "c" "e" "b" "a" "i" "g" "f"]
+      Actual: ["d" "c" "e" "b" "a" "i" "g" "f" "h"]
+
+FAIL "about delete-value - decrements size properly" at (t_core.clj:95)
+    Expected: 9
+      Actual: 8
+FAILURE: 3 checks failed.  (But 35 succeeded.)
+Subprocess failed
+
+
+** Details for Add sometimes increments size too much.
+
+WARNING: find already refers to: #'clojure.core/find in namespace: bst.core, being replaced by: #'bst.core/find
+
+FAIL "about add - increases the size properly" at (t_core.clj:44)
+    Expected: 9
+      Actual: 15
+
+FAIL "about add - increases the size properly" at (t_core.clj:45)
+    Expected: 9
+      Actual: 15
+
+FAIL "about add - increases the size properly" at (t_core.clj:46)
+    Expected: 9
+      Actual: 17
+
+FAIL "about add - increases the size properly" at (t_core.clj:47)
+    Expected: 9
+      Actual: 15
+
+FAIL "about add - increases the size properly" at (t_core.clj:48)
+    Expected: 10
+      Actual: 16
+FAILURE: 5 checks failed.  (But 33 succeeded.)
+Subprocess failed

@@ -1,0 +1,27 @@
+Grade Report for Efthimios Atsaloglou
+Produced 2015-04-28 12:38
+Netid: eatsalog cwid: A20292725
+Course: cs331 (2015-01)  Section: 02
+
+                   Assignment  Status Raw Max    Norm Weight  Points 
+----------------------------- ------- --- --- ------- ------ ------- 
+                   First Exam  Graded  58  80  72.50% 0.3750 27.1875 
+             Second Exam (v2)  Graded  83  92  90.22% 0.3750 33.8315 
+                   Final Exam Pending n/a 100     n/a 0.0000  0.0000 
+                  Initial Lab  Graded 100 100 100.00% 0.0375  3.7500 
+              Linked List Lab Dropped  28 100  28.00% 0.0000  0.0000 
+                    Deque Lab  Graded 100 100 100.00% 0.0375  3.7500 
+                      BST Lab  Graded 100 100 100.00% 0.0375  3.7500 
+                     Heap Lab  Graded 100 100 100.00% 0.0375  3.7500 
+        Pre Course Assessment  Graded   1   1 100.00% 0.0125  1.2500 
+Clojure Introduction Activity  Graded   1   1 100.00% 0.0125  1.2500 
+                      Records  Graded   1   1 100.00% 0.0125  1.2500 
+                    Recursion  Graded   1   1 100.00% 0.0125  1.2500 
+              Immutable Lists  Graded   1   1 100.00% 0.0125  1.2500 
+                      Vectors Pending n/a   1     n/a 0.0000  0.0000 
+          Binary Search Trees  Graded   1   1 100.00% 0.0125  1.2500 
+                   Traversals Missing   0   1   0.00% 0.0125  0.0000 
+                        Heaps Missing   0   1   0.00% 0.0125  0.0000 
+                     Up Trees Pending n/a   1     n/a 0.0000  0.0000 
+----------------------------- ------- --- --- ------- ------ ------- 
+                        Total                  83.52% 1.0000 83.5190 

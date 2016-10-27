@@ -1,0 +1,32 @@
+(defn delete [xx elt]
+(defn delete [xx elt] 
+(defn delete [xx elt] (cond(nil? xx) nil (= elt (:first xx)) (:rest xx) :else (Cons. (:first xx) (delete (:rest xx) elt)))) 
+(def x (mklist 1 4 7 9__
+(def x (mklist 1 4 7 9))
+(def y (delete x 7))
+(defn delete [xx elt] (cond(nil? xx) nil (= elt (:first xx)) (:rest xx) :else (Cons. (:first xx) (delete (:rest xx) elt)))) 
+exit
+(use midje.sweet)
+(:use midje.sweet)
+(:use 'midje.sweet)
+(use 'midje.sweet)
+(use 'quux.core)
+(autotest)
+(use 'midje.repl)
+lein midje
+(use 'midje.sweet)
+(def nul (List. (Cons. 7 (Cons. 1 (Cons. 7 (Cons. 3 (Cons. 7 nil))))) 5))
+load
+List.
+make-list
+load core.clj
+load src/linked_list_lab/core.clj
+help load
+main 
+-i src/linked_list_lab/core.clj
+-i
+main
+src/linked_list_lab/core.clj :relosd
+src/linked_list_lab/core.clj :reload
+rxiy
+exit

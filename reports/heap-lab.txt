@@ -1,0 +1,140 @@
+Lab report for Heap Lab - eatsalog
+Timestamp: 2015-04-25 22:43:10
+
+|  :scenario |                                   :title |                              :result | :score |
+|------------+------------------------------------------+--------------------------------------+--------|
+|    working |    Test student code vs instructor tests |                                 Pass |     45 |
+| qualifying |    Test student tests vs instructor code |                                 Pass |      5 |
+|    broke-1 |         Heap add doesn't increment size. | Pass: student tests detected errors. |     10 |
+|    broke-2 |              Move up only moves up once. | Pass: student tests detected errors. |     10 |
+|    broke-3 |           Percolate down only goes left. | Pass: student tests detected errors. |     10 |
+|    broke-4 | Percolate down right swaps never happen. | Pass: student tests detected errors. |     10 |
+|    broke-5 |           Delete doesn't decrement size. | Pass: student tests detected errors. |     10 |
+|      total |                              Total Score |                                      |    100 |
+
+Details:
+
+
+** Details for Test student code vs instructor tests
+
+All checks (48) succeeded.
+
+
+** Details for Test student tests vs instructor code
+
+All checks (18) succeeded.
+
+
+** Details for Heap add doesn't increment size.
+
+
+FAIL "about add - propery add element into heap" at (t_core.clj:43)
+Actual result did not agree with the checking function.
+        Actual result: {:data [0 2 1 7 8 3 nil], :size 5}::heap_lab.core.Heap
+    Checking function: (heap-equal (Heap. 6 [0 2 1 7 8 3 nil]))
+
+FAIL "about add - propery add element into heap" at (t_core.clj:44)
+Actual result did not agree with the checking function.
+        Actual result: {:data [0 2 1 7 8 11 nil], :size 5}::heap_lab.core.Heap
+    Checking function: (heap-equal (Heap. 7 [0 2 1 7 8 3 11]))
+
+FAIL "about add - propery add element into heap" at (t_core.clj:45)
+Actual result did not agree with the checking function.
+        Actual result: {:data [0 2 1 7 8 13 nil], :size 5}::heap_lab.core.Heap
+    Checking function: (heap-equal (Heap. 8 [0 2 1 7 8 3 11 13]))
+FAILURE: 3 checks failed.  (But 15 succeeded.)
+Subprocess failed
+
+
+** Details for Move up only moves up once.
+
+
+FAIL "about add - propery add element into heap" at (t_core.clj:43)
+Actual result did not agree with the checking function.
+        Actual result: {:data [1 2 0 7 8 3 nil], :size 6}::heap_lab.core.Heap
+    Checking function: (heap-equal (Heap. 6 [0 2 1 7 8 3 nil]))
+
+FAIL "about add - propery add element into heap" at (t_core.clj:44)
+Actual result did not agree with the checking function.
+        Actual result: {:data [1 2 0 7 8 3 11], :size 7}::heap_lab.core.Heap
+    Checking function: (heap-equal (Heap. 7 [0 2 1 7 8 3 11]))
+
+FAIL "about add - propery add element into heap" at (t_core.clj:45)
+Actual result did not agree with the checking function.
+        Actual result: {:data [1 2 0 7 8 3 11 13 nil nil nil nil nil nil], :size 8}::heap_lab.core.Heap
+    Checking function: (heap-equal (Heap. 8 [0 2 1 7 8 3 11 13]))
+FAILURE: 3 checks failed.  (But 15 succeeded.)
+Subprocess failed
+
+
+** Details for Percolate down only goes left.
+
+
+FAIL "about delete - properly deletes element from heap" at (t_core.clj:51)
+Actual result did not agree with the checking function.
+        Actual result: {:data [7 8 3 8 8 nil nil], :size 3}::heap_lab.core.Heap
+    Checking function: (heap-equal (Heap. 3 [3 7 8 nil nil nil]))
+
+FAIL "about delete - properly deletes element from heap" at (t_core.clj:52)
+Actual result did not agree with the checking function.
+        Actual result: {:data [3 8 3 8 8 nil nil], :size 2}::heap_lab.core.Heap
+    Checking function: (heap-equal (Heap. 2 [7 8 nil nil nil nil]))
+FAILURE: 2 checks failed.  (But 16 succeeded.)
+Subprocess failed
+
+
+** Details for Percolate down right swaps never happen.
+
+
+FAIL "about delete - properly deletes element from heap" at (t_core.clj:51)
+Actual result did not agree with the checking function.
+        Actual result: {:data [3 7 3 8 8 nil nil], :size 3}::heap_lab.core.Heap
+    Checking function: (heap-equal (Heap. 3 [3 7 8 nil nil nil]))
+
+FAIL "about delete - properly deletes element from heap" at (t_core.clj:52)
+Actual result did not agree with the checking function.
+        Actual result: {:data [3 7 3 8 8 nil nil], :size 2}::heap_lab.core.Heap
+    Checking function: (heap-equal (Heap. 2 [7 8 nil nil nil nil]))
+
+FAIL "about delete - properly deletes element from heap" at (t_core.clj:53)
+Actual result did not agree with the checking function.
+        Actual result: {:data [7 7 3 8 8 nil nil], :size 1}::heap_lab.core.Heap
+    Checking function: (heap-equal (Heap. 1 [8 nil nil nil nil nil]))
+FAILURE: 3 checks failed.  (But 15 succeeded.)
+Subprocess failed
+
+
+** Details for Delete doesn't decrement size.
+
+
+FAIL "about delete - properly deletes element from heap" at (t_core.clj:50)
+Actual result did not agree with the checking function.
+        Actual result: {:data [2 7 3 8 8 nil nil], :size 5}::heap_lab.core.Heap
+    Checking function: (heap-equal (Heap. 4 [2 7 3 8 nil nil]))
+
+FAIL "about delete - properly deletes element from heap" at (t_core.clj:51)
+Actual result did not agree with the checking function.
+        Actual result: {:data [3 7 8 8 8 nil nil], :size 5}::heap_lab.core.Heap
+    Checking function: (heap-equal (Heap. 3 [3 7 8 nil nil nil]))
+
+FAIL "about delete - properly deletes element from heap" at (t_core.clj:52)
+Actual result did not agree with the checking function.
+        Actual result: {:data [7 8 8 8 8 nil nil], :size 5}::heap_lab.core.Heap
+    Checking function: (heap-equal (Heap. 2 [7 8 nil nil nil nil]))
+
+FAIL "about delete - properly deletes element from heap" at (t_core.clj:53)
+Actual result did not agree with the checking function.
+        Actual result: {:data [8 8 8 8 8 nil nil], :size 5}::heap_lab.core.Heap
+    Checking function: (heap-equal (Heap. 1 [8 nil nil nil nil nil]))
+
+FAIL "about delete - properly deletes element from heap" at (t_core.clj:56)
+Actual result did not agree with the checking function.
+        Actual result: {:data [19 32 32], :size 3}::heap_lab.core.Heap
+    Checking function: (heap-equal (Heap. 2 [19 32 nil]))
+
+FAIL "about delete - properly deletes element from heap" at (t_core.clj:57)
+Actual result did not agree with the checking function.
+        Actual result: {:data [32 32 32], :size 3}::heap_lab.core.Heap
+    Checking function: (heap-equal (Heap. 1 [32 nil nil]))
+FAILURE: 6 checks failed.  (But 12 succeeded.)
+Subprocess failed
